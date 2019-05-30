@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright, Microsoft Corporation, All rights reserved.-->
+<Rule
+	Name="ConfigurationGeneral"
+	DisplayName="General"
+	PageTemplate="generic"
+	Description="General"
+	xmlns="http://schemas.microsoft.com/build/2009/properties">
+    <Rule.Categories>
+        <Category Name="General" DisplayName="General" Description="General" />
+        <Category Name="IoTEdge" DisplayName="IoT Edge" Description="IoT Edge" />
+    </Rule.Categories>
+    <Rule.DataSource>
+        <DataSource Persistence="ProjectFile" Label="Configuration" />
+    </Rule.DataSource>
+
+    <StringProperty Name="EdgeTargetPlatform" DisplayName="Target Platform" ReadOnly="True" Category="IoTEdge">
+        <StringProperty.DataSource>
+            <DataSource Persistence="ProjectFile" HasConfigurationCondition="False" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <EnumProperty Name="EdgeTargetConfiguration" DisplayName="Target Configuration" Category="IoTEdge">
+        <EnumValue Name="Debug" DisplayName="Debug" />
+        <EnumValue Name="Release" DisplayName="Release" />
+        <EnumProperty.DataSource>
+            <DataSource Persistence="ProjectFile" HasConfigurationCondition="False" />
+        </EnumProperty.DataSource>
+    </EnumProperty>
+
+    <StringProperty Name="EdgeDockerHost" DisplayName="DOCKER_HOST" Category="IoTEdge" Visible="False">
+        <StringProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty Name="EdgeDockerTlsVerify" DisplayName="DOCKER_TLS_VERIFY" Category="IoTEdge" Visible="False">
+        <StringProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty Name="EdgeDockerCertPath" DisplayName="DOCKER_CERT_PATH" Category="IoTEdge" Visible="False">
+        <StringProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <StringProperty Name="EdgeAdditionalVars" DisplayName="Additional Environment Variables" Category="IoTEdge" Visible="False">
+        <StringProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False" />
+        </StringProperty.DataSource>
+    </StringProperty>
+    
+    <StringProperty Name="ProjectGuid" Visible="False">
+        <StringProperty.DataSource>
+            <DataSource Persistence="ProjectFile" Label="Globals" HasConfigurationCondition="False" />
+        </StringProperty.DataSource>
+    </StringProperty>
+
+    <BoolProperty Name="ShowAllFiles" Visible="False">
+        <BoolProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False" />
+        </BoolProperty.DataSource>
+    </BoolProperty>
+
+    <BoolProperty Name="AutoRefresh" Visible="False">
+        <BoolProperty.DataSource>
+            <DataSource Persistence="UserFile" HasConfigurationCondition="False" />
+        </BoolProperty.DataSource>
+    </BoolProperty>
+</Rule>
