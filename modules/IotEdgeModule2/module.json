@@ -2,7 +2,7 @@
     "$schema-version": "0.0.1",
     "description": "",
   "image": {
-    "repository": "iotedgecr4.azurecr.io/vsmodule2_temp",
+    "repository": "iotedgecr5.azurecr.io/vsmodule2_temp",
     "tag": {
       "version": "0.0.1",
       "platforms": {
