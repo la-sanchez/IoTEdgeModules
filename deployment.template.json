@@ -11,9 +11,9 @@
             "loggingOptions": "",
             "registryCredentials": {
               "iotedgecr4": {
-                "address": "iotedgecr4.azurecr.io",
+                "address": "iotedgecr5.azurecr.io",
                 "password": "v+wqpml6Detblt3AMQyOX3Fae8sNPEbZ",
-                "username": "IoTEdgeCr4"
+                "username": "IoTEdgeCr5"
               }
             }
           }
