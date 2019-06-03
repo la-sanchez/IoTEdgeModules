@@ -67,23 +67,13 @@
               "createOptions": {}
             }
           },
-          "IotEdgeModule1": {
+          "filterModule": {
             "version": "1.0.0",
             "type": "docker",
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.IotEdgeModule1}",
-              "createOptions": {}
-            }
-          },
-          "IotEdgeModule2": {
-            "version": "1.0.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "${MODULES.IotEdgeModule2}",
+              "image": "${MODULES.filterModule}",
               "createOptions": {}
             }
           }
@@ -94,10 +84,8 @@
       "properties.desired": {
         "schemaVersion": "1.0",
         "routes": {
-          "IotEdgeModule1ToIoTHub": "FROM /messages/modules/IotEdgeModule1/outputs/* INTO $upstream",
-          "sensorToIotEdgeModule1": "FROM /messages/modules/tempSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/IotEdgeModule1/inputs/input1\")",
-          "IotEdgeModule2ToIoTHub": "FROM /messages/modules/IotEdgeModule2/outputs/* INTO $upstream",
-          "sensorToIoTEdgeModule2": "FROM /messages/modules/tempSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/IoTEdgeModule2/inputs/input1\")"
+          "filterModuleToIoTHub": "FROM /messages/modules/filterModule/outputs/* INTO $upstream",
+          "sensorTofilterModule": "FROM /messages/modules/tempSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/filterModule/inputs/input1\")"
         },
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200

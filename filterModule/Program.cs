@@ -1,4 +1,4 @@
-namespace IotEdgeModule1
+namespace filterModule
 {
     using System;
     using System.IO;

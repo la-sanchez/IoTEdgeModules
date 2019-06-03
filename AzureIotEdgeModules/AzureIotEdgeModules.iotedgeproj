@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>e3d62e6d-f95d-40d7-9f5b-d325f1be7ef4</ProjectGuid>
+    <ProjectGuid>ce0214b6-0230-4e1d-97cc-4aa96b0f5323</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <EdgeTargetPlatform>Linux Amd64</EdgeTargetPlatform>
@@ -23,8 +23,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IotEdgeModule1\IotEdgeModule1.csproj" />
-    <ProjectReference Include="..\IotEdgeModule2\IotEdgeModule2.csproj" />
+    <ProjectReference Include="..\filterModule\filterModule.csproj" />
   </ItemGroup>
   <Import Project="$(SolutionDir)\packages\Microsoft.VisualStudio.Azure.IoT.Edge.MSBuildTasks.0.4.1\build\AzureIoTEdgeProject.Build.targets" Condition="Exists('$(SolutionDir)\packages\Microsoft.VisualStudio.Azure.IoT.Edge.MSBuildTasks.0.4.1\build\AzureIoTEdgeProject.Build.targets')" />
   <Import Project="$(SolutionDir)\packages\Microsoft.VisualStudio.Azure.IoT.Edge.MSBuildTasks.0.4.1\build\AzureIoTEdgeProject.Build.props" Condition="Exists('$(SolutionDir)\packages\Microsoft.VisualStudio.Azure.IoT.Edge.MSBuildTasks.0.4.1\build\AzureIoTEdgeProject.Build.props')" />
