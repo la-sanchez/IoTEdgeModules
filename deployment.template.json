@@ -10,7 +10,7 @@
             "minDockerVersion": "v1.25",
             "loggingOptions": "",
             "registryCredentials": {
-              "iotedgecr4": {
+              "iotedgecr5": {
                 "address": "iotedgecr5.azurecr.io",
                 "password": "BGdTTeWq/hQvxWpB74lYttQvndNtC6SQ",
                 "username": "iotedgecr5"
